@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+	echo "Usage: $0 <hex_string>"
+	exit 1
+fi
+
+hex_string="$1"
+
+ascii_output=$(echo -n "$hex_string" | xxd -r -p 2>/dev/null)
+binary_output=$(echo -n "$hex_string" | xxd -r -p 2>/dev/null | xxd)
+hexdump_output=$(echo -n "$hex_string" | xxd -r -p 2>/dev/null | hexdump -C)
+
+echo "Hex String: $hex_string"
+echo "-------------------------------"
+echo "ASCII Output:"
+echo "$ascii_output"
+echo "-------------------------------"
+echo "Binary Output (xxd format):"
+echo "$binary_output"
+echo "-------------------------------"
+echo "Hexdump Output:"
+echo "$hexdump_output"
