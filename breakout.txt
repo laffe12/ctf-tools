@@ -1,4 +1,5 @@
-Out of the gate.
+Thanks to S1ren for this resource
+https://sirensecurity.io/blog/home/
 
 python -c 'import pty; pty.spawn("/bin/bash")'
 OR
@@ -9,16 +10,6 @@ alias ll='ls -lsaht --color=auto'
 Keyboard Shortcut: Ctrl + Z (Background Process.)
 stty raw -echo ; fg ; reset
 stty columns 200 rows 200
-
- 
-
-* Grab a valid tty.
-* What OS are you on? Grab access to those binaries fast by exporting each environment variable. Debian/CentOS/FreeBSD
-* Want a color terminal to easily tell apart file permissions? Directories? Files?
-* Fastest way to list out the files in a directory, show size, show permissions, human readable.
-* Make this shell stable.
-
-
 
 Is this rbash (Restricted Bash)? PT1
 $ vi
