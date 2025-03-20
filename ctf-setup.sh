@@ -4,7 +4,7 @@
 #sudo apt upgrade -y
 
 #Create tools directory
-BASE_DIR=/home/$USER/test/tools
+BASE_DIR=/home/$USER/ctf/tools
 echo "creating $BASE_DIR"
 
 #Array of all sub directories
