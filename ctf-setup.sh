@@ -38,33 +38,37 @@ sudo apt install obsidian -y
 sudo apt install extrepo -y
 sudo extrepo enable librewolf
 sudo apt update && sudo apt install librewolf -y
-git clone https://github.com/danielmiessler/SecLists.git /usr/share/wordlists/
+git clone https://github.com/danielmiessler/SecLists.git /usr/share/wordlists/SecLists
 
 #Cryptography tools
-git clone https://github.com/RsaCtfTool/RsaCtfTool.git $BASE_DIR/cryptography
-git clone https://github.com/Kibouo/rustpad.git $BASE_DIR/cryptography
-git clone https://github.com/unode/firefox_decrypt.git $BASE_DIR/cryptography
-git clone https://github.com/lclevy/firepwd.git $BASE_DIR/cryptography
+sudo git clone https://github.com/RsaCtfTool/RsaCtfTool.git $BASE_DIR/cryptography/RsaCtfTool
+sudo git clone https://github.com/Kibouo/rustpad.git $BASE_DIR/cryptography/rustpad
+sudo git clone https://github.com/unode/firefox_decrypt.git $BASE_DIR/cryptography/firefox-decrypt
+sudo git clone https://github.com/lclevy/firepwd.git $BASE_DIR/cryptography/firepwd
 
 #Forensics tools
-git clone https://github.com/matro7sh/keepass-dump-masterkey.git $BASE_DIR/forensics
-git clone https://github.com/volatilityfoundation/volatility3.git $BASE_DIR/forensics
+sudo git clone https://github.com/matro7sh/keepass-dump-masterkey.git $BASE_DIR/forensics/
+sudo git clone https://github.com/volatilityfoundation/volatility3.git $BASE_DIR/forensics
 
 #Forensics tools
-wget https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v5.0.1/SonicVisualiser-5.0.1-x86_64.AppImage $BASE_DIR/steganography
-wget http://www.caesum.com/handbook/Stegsolve.jar -O $BASE_DIR/steganography/stegsolve.jar
-gem install zsteg
+wget -P $BASE_DIR/steganography/audio https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v5.0.1/SonicVisualiser-5.0.1-x86_64.AppImage
+wget -P $BASE_DIR/steganography/image http://www.caesum.com/handbook/Stegsolve.jar
+sudo gem install zsteg
 sudo apt install steghide
 sudo apt install pdf-parser
 
 #Cracking tools
-git clone https://github.com/openwall/john.git $BASE_DIR/cracking
+sudo git clone https://github.com/openwall/john.git $BASE_DIR/cracking/john-bundle
 
 #Binary Exploitation (pwn) tools
-git clone https://github.com/pwndbg/pwndbg $BASE_DIR/pwn
-git clone https://github.com/extremecoders-re/pyinstxtractor.git $BASE_DIR/pwn
+sudo git clone https://github.com/pwndbg/pwndbg $BASE_DIR/pwn/pwndbg
+sudo git clone https://github.com/extremecoders-re/pyinstxtractor.git $BASE_DIR/pwn/pyinstxtractor
 sudo apt install ghidra
 
+sudo apt autoremove
+
+#Alias
+sudo echo "alias ll='clear; ls -laht'" >> /home/$USER/.zshrc
+
 #Missing
-#alias ll='clear; ls -laht'
 #install anaconda & sagemath
