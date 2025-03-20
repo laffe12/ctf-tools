@@ -1,7 +1,11 @@
 #!/bin/bash
+# This script automates the setup of a directory structure for CTF tools. 
+# It creates and organizes the directories and then downloads and installs a collection of CTF tools that I find useful.
+# The goal is to make setting up a new virtual machine for CTF easy.
 
-#sudo apt update
-#sudo apt upgrade -y
+#Upgrade the system
+sudo apt update
+sudo apt upgrade -y
 
 #Create tools directory
 BASE_DIR=/home/$USER/ctf/tools
