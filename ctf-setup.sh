@@ -47,8 +47,8 @@ sudo git clone https://github.com/unode/firefox_decrypt.git $BASE_DIR/cryptograp
 sudo git clone https://github.com/lclevy/firepwd.git $BASE_DIR/cryptography/firepwd
 
 #Forensics tools
-sudo git clone https://github.com/matro7sh/keepass-dump-masterkey.git $BASE_DIR/forensics/
-sudo git clone https://github.com/volatilityfoundation/volatility3.git $BASE_DIR/forensics
+sudo git clone https://github.com/matro7sh/keepass-dump-masterkey.git $BASE_DIR/forensics/keepass-dump-masterkey
+sudo git clone https://github.com/volatilityfoundation/volatility3.git $BASE_DIR/forensics/volatility3
 
 #Forensics tools
 wget -P $BASE_DIR/steganography/audio https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v5.0.1/SonicVisualiser-5.0.1-x86_64.AppImage
